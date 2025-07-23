@@ -34,7 +34,7 @@
             <a class="nav-link active" aria-current="page" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="procuras.html">Procuras</a>
+            <a class="nav-link" href="index.html">Procuras</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="anuncio.html">Anuncie</a>
@@ -49,28 +49,41 @@
   </nav>
 
   <main>
+    <h2 class="text-center mb-4">Publique seu anúncio</h2>
     <form id="formulario">
-      <label>Título:</label>
-      <input type="text" id="titulo" required>
+      <div class="mb-3">
+        <label for="titulo" class="form-label">Título:</label>
+        <input type="text" class="form-control" id="titulo" required>
+      </div>
 
-      <label>Descrição:</label>
-      <textarea id="descricao" rows="4" required></textarea>
+      <div class="mb-3">
+        <label for="descricao" class="form-label">Descrição:</label>
+        <textarea class="form-control" id="descricao" rows="4" required></textarea>
+      </div>
 
-      <label>Categoria:</label>
-      <input type="text" id="categoria" required>
+      <div class="mb-3">
+        <label for="categoria" class="form-label">Categoria:</label>
+        <input type="text" class="form-control" id="categoria" required>
+      </div>
 
-      <label>Seu nome:</label>
-      <input type="text" id="nome" required>
+      <div class="mb-3">
+        <label for="nome" class="form-label">Seu nome:</label>
+        <input type="text" class="form-control" id="nome" required>
+      </div>
 
-      <label>Contato (WhatsApp ou Email):</label>
-      <input type="text" id="contato" required>
+      <div class="mb-4">
+        <label for="contato" class="form-label">Contato (WhatsApp ou Email):</label>
+        <input type="text" class="form-control" id="contato" required>
+      </div>
 
-      <button type="submit">📤 Publicar</button>
+      <div class="d-grid">
+        <button type="submit" class="btn btn-primary btn-lg">📤 Publicar</button>
+      </div>
     </form>
   </main>
 
   <footer class="custom-footer">
-    <small>&copy; 2025 MuralJá. Todos os direitos reservados.</small>
+    <small>&copy; 2025 MuralJá.</small>
   </footer>
 </body>
 

@@ -45,3 +45,46 @@ body {
   bottom: 0;
   width: 100%;
 }
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  /* ou "row" se quiser um ao lado do outro */
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.centralizar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.btn-primary {
+  margin: 10px;
+  background-color: #F7941D;
+  color: #004A8D;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  margin: 10px;
+  background-color: #004A8D;
+  color: #F7941D;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
