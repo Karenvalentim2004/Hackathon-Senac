@@ -49,7 +49,6 @@ body {
 .button-container {
   display: flex;
   flex-direction: column;
-  /* ou "row" se quiser um ao lado do outro */
   align-items: center;
   justify-content: center;
   height: 100%;
