@@ -2,13 +2,10 @@ body {
   background-color: #f5f5f5;
 }
 
-.card-servico {
-  margin-bottom: 1rem;
 }
 
-.btn-whatsapp {
-  background-color: #25d366;
-  color: white;
+.anuncio {
+  margin-bottom: 1rem;
 }
 
 .navbar-custom {
@@ -22,7 +19,7 @@ body {
 
 .navbar-custom .nav-link:hover,
 .navbar-custom .navbar-brand:hover {
-  color: #F7941D;/
+  color: #F7941D;
 }
 
 .logo {
@@ -30,10 +27,6 @@ body {
   background-color: white;
   padding: 5px;
   border-radius: 8px;
-}
-
-.card-servico {
-  border-left: 5px solid #0054A6;
 }
 
 .custom-footer {
@@ -86,4 +79,90 @@ form {
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #0077cc;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #0077cc;
+  color: white;
+}
+
+.nav-tabs .nav-link {
+  color: #0077cc;
+}
+
+.btn-primary {
+  background-color: #0077cc;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #005fa3;
+}
+
+.logo {
+  width: 40px;
+  height: auto;
+}
+
+.alert {
+  font-size: 0.9rem;
+}
+
+button:hover {
+  background-color: #122640;
+}
+ 
+#lista-anuncios {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+ 
+.anuncio {
+  border: 1px solid var(--azul-senac);
+  border-left: 5px solid var(--azul-senac);
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+ 
+.anuncio h3 {
+  margin-bottom: 0.5rem;
+}
+
+.voltar {
+  display: inline-block;
+  margin: 1rem;
+  color: var(--azul-senac);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+:root {
+  --azul-senac: #004A8D;
+  --laranja-senac: #f39200;
+  --branco: #ffffff;
+}
+ 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.card-body {
+  height: 250px;
 }
