@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mural de Serviços</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="css.css">
 </head>
 
@@ -50,6 +51,21 @@
 
   <img src="mural2.jpg" alt="mural" width="100% height= 100px">
 
+  <br>
+
+  <form class="d-flex align-items-center mb-3" role="search" onsubmit="pesquisarNaPagina(event)">
+    <div class="input-group">
+      <span class="input-group-text">
+        <i class="bi bi-search"></i>
+      </span>
+      <input id="campo-pesquisa" class="form-control" type="search" placeholder="Pesquisar..." aria-label="Pesquisar">
+    </div>
+    <button class="btn btn-primary ms-2" type="submit">Buscar</button>
+    <button class="btn btn-secondary ms-2" type="button" onclick="limparBusca()">Limpar</button>
+
+  </form>
+
+
   <div class="centralizar">
     <button type="button" class="btn btn-primary btn-lg" onclick="location.href='#servicos'">Procure</button>
     <button type="button" class="btn btn-secondary btn-lg"
@@ -62,7 +78,7 @@
       <!-- Anúncios serão inseridos aqui via JS -->
     </main>
 
-    <div class="anuncio lista-anuncios">
+    <div class="anuncio">
       <div class="card-body">
         <h3 class="card-title">Podologia</h3>
         <p><strong>Categoria:</strong> Aulas</p>
@@ -72,7 +88,7 @@
       </div>
     </div>
 
-    <div class="anuncio lista-anuncios">
+    <div class="anuncio ">
       <div class="card-body">
         <h3 class="card-title">Podologia</h3>
         <p><strong>Categoria:</strong> Aulas</p>
@@ -82,7 +98,7 @@
       </div>
     </div>
 
-    <div class="anuncio lista-anuncios">
+    <div class="anuncio">
       <div class="card-body">
         <h3 class="card-title">Podologia</h3>
         <p><strong>Categoria:</strong> Aulas</p>
@@ -92,7 +108,7 @@
       </div>
     </div>
 
-    <div class="anuncio lista-anuncios">
+    <div class="anuncio">
       <div class="card-body">
         <h3 class="card-title">Podologia</h3>
         <p><strong>Categoria:</strong> Aulas</p>
@@ -102,7 +118,7 @@
       </div>
     </div>
 
-    <div class="anuncio lista-anuncios">
+    <div class="anuncio">
       <div class="card-body">
         <h3 class="card-title">Podologia</h3>
         <p><strong>Categoria:</strong> Aulas</p>
@@ -112,9 +128,9 @@
       </div>
     </div>
 
-    <div class="anuncio lista-anuncios">
+    <div class="anuncio">
       <div class="card-body">
-        <h3 class="card-title">Podologia</h3>
+        <h3 class="card-title">Matemática</h3>
         <p><strong>Categoria:</strong> Aulas</p>
         <p class=descricao>podologias.</p>
         <p><strong>Anunciante:</strong> Edna</p>
@@ -139,6 +155,55 @@
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
+
+
+  <script>
+    function pesquisarNaPagina(event) {
+      event.preventDefault();
+
+      const termo = document.getElementById("campo-pesquisa").value.toLowerCase();
+      const anuncios = document.querySelectorAll("#servicos .anuncio");
+
+      let encontrou = false;
+
+      anuncios.forEach(anuncio => {
+        const texto = anuncio.textContent.toLowerCase();
+
+        if (texto.includes(termo)) {
+          anuncio.style.display = "block";
+          const el = anuncio.querySelector(".card-body");
+          el.innerHTML = el.textContent.replace(
+            new RegExp(`(${termo})`, "gi"),
+            `<mark>$1</mark>`
+          );
+          encontrou = true;
+        } else {
+          anuncio.style.display = "none";
+        }
+      });
+
+      if (!encontrou) {
+        alert("Nenhum resultado encontrado.");
+      }
+    }
+
+    function limparBusca() {
+      const campo = document.getElementById("campo-pesquisa");
+      const anuncios = document.querySelectorAll("#servicos .anuncio");
+
+      campo.value = ""; 
+
+      anuncios.forEach(anuncio => {
+        anuncio.style.display = "block"; 
+
+        const el = anuncio.querySelector(".card-body");
+        if (el) {
+          el.innerHTML = el.textContent; 
+        }
+      });
+    }
+  </script>
+
 
   <script src="app.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

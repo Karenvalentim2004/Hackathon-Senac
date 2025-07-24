@@ -8,7 +8,7 @@ if (formulario) {
       descricao: document.getElementById('descricao').value.trim(),
       categoria: document.getElementById('categoria').value.trim(),
       nome: document.getElementById('nome').value.trim(),
-      Local: document.getElementById('local').value.trim(),
+      local: document.getElementById('local').value.trim(),
       contato: document.getElementById('contato').value.trim()
     };
  
