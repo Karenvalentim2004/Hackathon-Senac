@@ -32,7 +32,7 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            <a class="nav-link active" href="#servicos">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="index.html">Procuras</a>
@@ -51,7 +51,7 @@
 
   <img src="mural2.jpg" alt="mural" width="100% height= 100px">
 
-  <br>
+  <br><br>
 
   <form class="d-flex align-items-center mb-3" role="search" onsubmit="pesquisarNaPagina(event)">
     <div class="input-group">
@@ -81,60 +81,66 @@
     <div class="anuncio">
       <div class="card-body">
         <h3 class="card-title">Podologia</h3>
-        <p><strong>Categoria:</strong> Aulas</p>
+        <p><strong>Categoria:</strong> Sáude</p>
         <p class=descricao>podologias.</p>
         <p><strong>Anunciante:</strong> Edna</p>
         <p><strong>Local:</strong> Sbo</p>
+        <p><strong>Contato:</strong> (19)99999-9999</p>
       </div>
     </div>
 
     <div class="anuncio ">
       <div class="card-body">
-        <h3 class="card-title">Podologia</h3>
-        <p><strong>Categoria:</strong> Aulas</p>
-        <p class=descricao>podologias.</p>
-        <p><strong>Anunciante:</strong> Edna</p>
-        <p><strong>Local:</strong> Sbo</p>
+        <h3 class="card-title">Tatuagem</h3>
+        <p><strong>Categoria:</strong> Esteticá</p>
+        <p class=descricao>Faço todo tipo de Tatuagem.</p>
+        <p><strong>Anunciante:</strong> Felipe</p>
+        <p><strong>Local:</strong> Americana</p>
+        <p><strong>Contato:</strong> (19)99999-9999</p>
       </div>
     </div>
 
     <div class="anuncio">
       <div class="card-body">
-        <h3 class="card-title">Podologia</h3>
-        <p><strong>Categoria:</strong> Aulas</p>
-        <p class=descricao>podologias.</p>
-        <p><strong>Anunciante:</strong> Edna</p>
-        <p><strong>Local:</strong> Sbo</p>
+        <h3 class="card-title">Morango do amor</h3>
+        <p><strong>Categoria:</strong> Alimento</p>
+        <p class=descricao>Vendo Morango do amor e outras frutas do amor.</p>
+        <p><strong>Anunciante:</strong> Bruna</p>
+        <p><strong>Local:</strong> Nova odessa</p>
+        <p><strong>Contato:</strong> (19)99999-9999</p>
       </div>
     </div>
 
     <div class="anuncio">
       <div class="card-body">
-        <h3 class="card-title">Podologia</h3>
-        <p><strong>Categoria:</strong> Aulas</p>
-        <p class=descricao>podologias.</p>
-        <p><strong>Anunciante:</strong> Edna</p>
-        <p><strong>Local:</strong> Sbo</p>
+        <h3 class="card-title">Fotografo</h3>
+        <p><strong>Categoria:</strong>Foto</p>
+        <p class=descricao>Faço suas fotos seja para book, institucionais e Livres</p>
+        <p><strong>Anunciante:</strong>Miguel</p>
+        <p><strong>Local:</strong> Sánta barabara do oeste</p>
+        <p><strong>Contato:</strong> (19)99999-9999</p>
       </div>
     </div>
 
     <div class="anuncio">
       <div class="card-body">
-        <h3 class="card-title">Podologia</h3>
-        <p><strong>Categoria:</strong> Aulas</p>
-        <p class=descricao>podologias.</p>
-        <p><strong>Anunciante:</strong> Edna</p>
-        <p><strong>Local:</strong> Sbo</p>
+        <h3 class="card-title">Maquiador</h3>
+        <p><strong>Categoria:</strong>Esteticá</p>
+        <p class=descricao>Faço maquiagem para casamento, fetas e eventos</p>
+        <p><strong>Anunciante:</strong>Ana</p>
+        <p><strong>Local:</strong>Região de Americana</p>
+        <p><strong>Contato:</strong> (19)99999-9999</p>
       </div>
     </div>
 
     <div class="anuncio">
       <div class="card-body">
-        <h3 class="card-title">Matemática</h3>
+        <h3 class="card-title">Aulas de matemática</h3>
         <p><strong>Categoria:</strong> Aulas</p>
-        <p class=descricao>podologias.</p>
-        <p><strong>Anunciante:</strong> Edna</p>
-        <p><strong>Local:</strong> Sbo</p>
+        <p class=descricao>Dou aulas particular de matemática.</p>
+        <p><strong>Anunciante:</strong>gustavo</p>
+        <p><strong>Local:</strong> Nova odessa</p>
+        <p><strong>Contato:</strong> (19)99999-9999</p>
       </div>
     </div>
 
@@ -191,14 +197,14 @@
       const campo = document.getElementById("campo-pesquisa");
       const anuncios = document.querySelectorAll("#servicos .anuncio");
 
-      campo.value = ""; 
+      campo.value = "";
 
       anuncios.forEach(anuncio => {
-        anuncio.style.display = "block"; 
+        anuncio.style.display = "block";
 
         const el = anuncio.querySelector(".card-body");
         if (el) {
-          el.innerHTML = el.textContent; 
+          el.innerHTML = el.textContent;
         }
       });
     }
